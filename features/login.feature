@@ -5,9 +5,9 @@ Feature: This is login for Payfazz application
     #untuk menjabarkan, ketik cucumber pada terminal
     Given I land on onboarding page
     Then I click on Login button
-    Then I fill login number
+    Then I fill login number "081517938164"
     Then I click Lanjut button
-    Then I fill login password
+    Then I fill login password "Ultraman123"
     Then I click on Login button to enter Home page
     Then I land on Home page
 
