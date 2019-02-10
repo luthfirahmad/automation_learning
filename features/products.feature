@@ -1,13 +1,14 @@
 Feature: This feature include using Payfazz products like ppob, bank transfer, and many more
-  @wip
-  Scenario: Buying phone balance using Payfazz
+  Background:
     When I land on onboarding page
     Then I do login with phone number "081517938164" and password "Ultraman123"
-    Then I swipe to find Pulsa Seluler menu
-    Then I click Pulsa Seluler menu
-    Then I verify that was Pulsa Seluler page
+
+  @buy_pulsa
+  Scenario: Buying phone balance using Payfazz
+    Then I swipe to find "Pulsa Seluler" menu
+    Then I verify that was "Pulsa Seluler" page
     Then I fill phone number
-    Then I choose "Indosat 5.000"
+    Then I choose plan "Indosat Rp 5.000"
     Then I choose Saldo Payfazz as payment method
     Then I click Bayar Sekarang
     Then I input pin "123456"
@@ -16,4 +17,209 @@ Feature: This feature include using Payfazz products like ppob, bank transfer, a
     Then I verify my payment
     Then I click Kembali Ke Menu Utama button
     Then I land on Home page
+
+  @buy_data
+  Scenario: Buying data package using Payfazz
+    Then I swipe to find "Data" menu
+    Then I verify that was "Data" page
+    Then I fill phone number
+    Then I choose plan "Freedom Combo M"
+    Then I choose Saldo Payfazz as payment method
+    Then I click Bayar Sekarang
+    Then I input pin "123456"
+    Then I click Lanjut button
+    Then I click Nanti Saja button
+    Then I verify my payment
+    Then I click Kembali Ke Menu Utama button
+    Then I land on Home page
+
+  @buy_token
+  Scenario: Buying electricity token
+    Then I swipe to find "Token PLN" menu
+    Then I verify that was "Token PLN" page
+    Then I fill bill number
+    Then I choose plan "PLN 20.000"
+    Then I fill phone number
+    Then I choose Saldo Payfazz as payment method
+    Then I click Bayar Sekarang
+    Then I input pin "123456"
+    Then I click Lanjut button
+    Then I click Nanti Saja button
+    Then I verify my payment
+    Then I click Kembali Ke Menu Utama button
+    Then I land on Home page
+
+  @buy_pascabayar_seluler
+  Scenario: Paying postpaid phone balance
+    Then I swipe to find "Pascabayar Seluler" menu
+    Then I verify that was "Pascabayar Seluler" page
+    Then I fill phone number
+    Then I verify bill
+    Then I click Metode Pembayaran button
+    Then I choose Saldo Payfazz as payment method
+    Then I click Bayar Sekarang
+    Then I input pin "123456"
+    Then I click Lanjut button
+    Then I click Nanti Saja button
+    Then I verify my payment
+    Then I click Kembali Ke Menu Utama button
+    Then I land on Home page
+
+  @buy_pascabayar_pln
+  Scenario: Paying postpaid electricity
+    Then I swipe to find "Tagihan PLN" menu
+    Then I verify that was "Tagihan PLN" page
+    Then I fill bill number
+    Then I verify that was "Notifikasi Penerima" page
+    Then I fill phone number
+    Then I verify bill
+    Then I click Metode Pembayaran button
+    Then I choose Saldo Payfazz as payment method
+    Then I click Bayar Sekarang
+    Then I input pin "123456"
+    Then I click Lanjut button
+    Then I click Nanti Saja button
+    Then I verify my payment
+    Then I click Kembali Ke Menu Utama button
+    Then I land on Home page
+
+  @buy_pascabayar_pgn
+  Scenario: Paying postpaid gas
+    Then I swipe to find "Perusahaan Gas Negara" menu
+    Then I verify that was "Perusahaan Gas Negara" page
+    Then I fill bill number
+    Then I verify that was "Notifikasi Penerima" page
+    Then I fill phone number
+    Then I verify bill
+    Then I click Metode Pembayaran button
+    Then I choose Saldo Payfazz as payment method
+    Then I click Bayar Sekarang
+    Then I input pin "123456"
+    Then I click Lanjut button
+    Then I click Nanti Saja button
+    Then I verify my payment
+    Then I click Kembali Ke Menu Utama button
+    Then I land on Home page
+
+  @buy_pascabayar_bpjs
+  Scenario: Paying postpaid bpjs
+    Then I swipe to find "BPJS" menu
+    Then I verify that was "BPJS" page
+    Then I fill bill number
+    Then I choose plan "1 bulan ke depan"
+    Then I verify that was "Notifikasi Penerima" page
+    Then I fill phone number
+    Then I verify bill
+    Then I click Metode Pembayaran button
+    Then I choose Saldo Payfazz as payment method
+    Then I click Bayar Sekarang
+    Then I input pin "123456"
+    Then I click Lanjut button
+    Then I click Nanti Saja button
+    Then I verify my payment
+    Then I click Kembali Ke Menu Utama button
+    Then I land on Home page
+
+  @buy_pascabayar_tv
+  Scenario: paying postpaid tv suscribe
+    Then I swipe to find "TV Berlangganan" menu
+    Then I verify that was "TV Berlangganan" page
+    Then I choose plan "TV NEX"
+    Then I verify that was "Input Nomor Pelanggan" page
+    Then I fill bill number
+    Then I verify that was "Notifikasi Penerima" page
+    Then I fill phone number
+    Then I verify bill
+    Then I click Metode Pembayaran button
+    Then I choose Saldo Payfazz as payment method
+    Then I click Bayar Sekarang
+    Then I input pin "123456"
+    Then I click Lanjut button
+    Then I click Nanti Saja button
+    Then I verify my payment
+    Then I click Kembali Ke Menu Utama button
+    Then I land on Home page
+
+  @buy_pascabayar_phone
+  Scenario: paying postpaid phone
+    Then I swipe to find "Telkom" menu
+    Then I verify that was "Telkom" page
+    Then I choose plan "INDIHOME (SPEEDY)"
+    Then I verify that was "Telkom" page
+    Then I fill bill number
+    Then I verify that was "Notifikasi Penerima" page
+    Then I fill phone number
+    Then I verify bill
+    Then I click Metode Pembayaran button
+    Then I choose Saldo Payfazz as payment method
+    Then I click Bayar Sekarang
+    Then I input pin "123456"
+    Then I click Lanjut button
+    Then I click Nanti Saja button
+    Then I verify my payment
+    Then I click Kembali Ke Menu Utama button
+    Then I land on Home page
+
+  @buy_pascabayar_multifinance
+  Scenario: paying postpaid for multifinance
+    Then I swipe to find "Multifinance" menu
+    Then I verify that was "Multi Finance" page
+    Then I choose plan "MEGA AUTO FINANCE"
+    Then I verify that was "Input No Kontrak" page
+    Then I fill bill number
+    Then I verify that was "Notifikasi Penerima" page
+    Then I fill phone number
+    Then I verify bill
+    Then I click Metode Pembayaran button
+    Then I choose Saldo Payfazz as payment method
+    Then I click Bayar Sekarang
+    Then I input pin "123456"
+    Then I click Lanjut button
+    Then I click Nanti Saja button
+    Then I verify my payment
+    Then I click Kembali Ke Menu Utama button
+    Then I land on Home page
+
+  @buy_pascabayar_pdam
+  Scenario: paying postpaid for pdam
+    Then I swipe to find "PDAM" menu
+    Then I verify that was "PDAM" page
+    Then I choose plan "AETRA"
+    Then I verify that was "Input Nomor Meter" page
+    Then I fill pdam bill number "12345678910"
+    Then I press lanjut button
+    Then I fill phone number
+    Then I verify bill
+    Then I click Metode Pembayaran button
+    Then I choose Saldo Payfazz as payment method
+    Then I click Bayar Sekarang
+    Then I input pin "123456"
+    Then I click Lanjut button
+    Then I click Nanti Saja button
+    Then I verify my payment
+    Then I click Kembali Ke Menu Utama button
+    Then I land on Home page
+    
+  @send_wallet
+  Scenario: send wallet to other account
+    Then I click "Kirim Saldo" menu
+    Then I verify that was "Kirim Saldo" page
+    Then I fill target phone number
+    Then I check target account name
+    Then I fill news "Bayar mie ayam"
+    Then I press lanjut button
+    Then I choose plan "Rp 25.000"
+    Then I choose Saldo Payfazz as payment method
+    Then I click Bayar Sekarang
+    Then I input pin "123456"
+    Then I click Lanjut button
+    Then I click Nanti Saja button
+    Then I verify my payment
+    Then I click Kembali Ke Menu Utama button
+    Then I land on Home page
+
+    
+
+
+
 

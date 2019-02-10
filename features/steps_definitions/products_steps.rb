@@ -22,10 +22,6 @@ Then("I fill phone number") do
   Appium::TouchAction.new.tap(x:954, y: 1647).perform
 end
 
-Then("I choose {string}") do |value|
-  text("#{value}").click
-end
-
 Then("I choose Saldo Payfazz as payment method") do
   text("Saldo Payfazz").click
 end
@@ -50,11 +46,82 @@ Then("I click Kembali Ke Menu Utama button") do
   find_element(id: "button").click
 end
 
-
-Then(/^I verify that was Pulsa Seluler page$/) do
-  text("Pulsa Seluler")
+Then(/^I swipe to find "([^"]*)" menu$/) do |value|
+  swipe_in_product(value)
 end
 
-Then(/^I swipe to find Pulsa Seluler menu$/) do
-  Appium::TouchAction.new.swipe(start_x: 0.5, start_y: 0.4, end_x: 0.5, end_y: 1, duration: 600).perform
+Then(/^I verify that was "([^"]*)" page$/) do |value|
+  text(value)
+end
+
+Then(/^I choose plan "([^"]*)"$/) do |value|
+  text(value).click
+end
+
+Then(/^I fill bill number$/) do
+  click_one
+  click_two
+  click_three
+  click_four
+  click_five
+  click_six
+  click_seven
+  click_eight
+  click_nine
+  click_zero
+  click_one
+  click_two
+  click_three
+  Appium::TouchAction.new.tap(x:954, y: 1647).perform
+end
+
+Then(/^I verify bill$/) do
+  text("Cek Tagihan")
+  find_element(id: "text_view_total_payment").text
+  find_element(id: "text_view_meta_header_value").text
+end
+
+Then(/^I click Metode Pembayaran button$/) do
+  text("Pilih Metode Pembayaran").click
+end
+
+Then(/^I press lanjut button$/) do
+  find_element(xpath: "//android.widget.TextView[@text='LANJUT']").click
+end
+
+Then(/^I fill pdam bill number "([^"]*)"$/) do |value|
+  find_element(id: "edit_text_input").send_keys(value)
+end
+
+Then(/^I fill target phone number$/) do
+  click_zero
+  click_eight
+  click_one
+  click_nine
+  click_two
+  click_seven
+  click_four
+  click_four
+  click_zero
+  click_zero
+  click_zero
+  click_eight
+  Appium::TouchAction.new.tap(x:954, y: 1647).perform
+end
+
+Then(/^I check target account name$/) do
+  find_element(id: "tv_value").text
+end
+
+
+Then(/^I fill news "([^"]*)"$/) do |value|
+  find_element(id: "edit_text_form_input").send_keys(value)
+end
+
+Then(/^I click "([^"]*)" menu$/) do |value|
+  text(value).click
+end
+
+Then("I choose {string} plan") do |value|
+  text(value).click
 end
