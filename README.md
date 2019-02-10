@@ -51,8 +51,8 @@ $ cd ~/Downloads/RubyMine-2018.3.2/bin
 $ ./rubymnine.sh
 ```
 * Create new project with name ``automation_training``, in that folder create directory named ``features``
-* In ``features`` directory in ``automation_training`` folder create ``.feature`` file
-* In ``.feature`` file create testcase with Gherkin format, example:
+* In ``features`` directory in ``automation_training`` folder create ``your-feature.feature`` file
+* In ``your-feature.feature`` file create testcase with Gherkin format, example:
 
 ```
 Feature: login
