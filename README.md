@@ -45,11 +45,12 @@ This is repository about Payfazz automation testing using appium an cucumber
   ``git --version``
   
 ## Create Testcase in Cucumber
-* Open your Rubymine, execute ``./rubymine.sh`` in directory ``bin`` of Rubymine. In terminal, execute:
+* After you download Rubymine, extract .zip file to your directory. Open your Rubymine directory, execute ``./rubymine.sh`` in directory ``bin`` of Rubymine. In terminal, execute (mine was extracted in Download directory):
 ```
 $ cd ~/Downloads/RubyMine-2018.3.2/bin
 $ ./rubymnine.sh
 ```
+* Create new project with name ``automation_training``, in that folder create directory named ``features``
 * In ``features`` directory in ``automation_training`` folder create ``.feature`` file
 * In ``.feature`` file create testcase with Gherkin format, example:
 
