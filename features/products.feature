@@ -218,6 +218,52 @@ Feature: This feature include using Payfazz products like ppob, bank transfer, a
     Then I click Kembali Ke Menu Utama button
     Then I land on Home page
 
+  @buy_gopay
+  Scenario: buying gopay
+    Then I click "Uang Elektronik" menu
+    Then I verify that was "Uang Elektronik" page
+    Then I choose plan "Go-Pay Customer"
+    Then I verify that was "Gopay Customer" page
+    Then I fill phone number
+    Then I check target account name
+    Then I press lanjut in uang elektronik page
+    Then I verify that was "Nama Pelanggan" page
+    Then I input dua puluh lima ribu rupiah for recharge
+    Then I choose Saldo Payfazz as payment method
+    Then I click Bayar Sekarang
+    Then I input pin "123456"
+    Then I click Lanjut button
+    Then I click Nanti Saja button
+    Then I verify my payment
+    Then I click Kembali Ke Menu Utama button
+    Then I land on Home page
+
+  @buy_bni_unikqu
+  Scenario: buying BNI Unikqu
+    Then I click "Uang Elektronik" menu
+    Then I verify that was "Uang Elektronik" page
+    Then I choose plan "BNI-UnikQu"
+    Then I verify that was "BNI-UnikQu" page
+    Then I fill phone number
+    Then I check target account name
+    Then I press lanjut in uang elektronik page
+    Then I verify that was "Nama Pelanggan" page
+    Then I input dua puluh lima ribu rupiah for recharge
+    Then I choose Saldo Payfazz as payment method
+    Then I click Bayar Sekarang
+    Then I input pin "123456"
+    Then I click Lanjut button
+    Then I click Nanti Saja button
+    Then I verify my payment
+    Then I click Kembali Ke Menu Utama button
+    Then I land on Home page
+    
+
+
+
+
+
+    
     
 
 

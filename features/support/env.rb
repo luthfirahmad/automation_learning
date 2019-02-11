@@ -24,7 +24,7 @@ def login_function (phone_number, password)
   find_element(id: "ic_bottom_nav_home")
 end
 
-def swipe_in_product (value)
+def swipe_method (value)
   current_element = get_source
   previous_element = ""
 
@@ -32,13 +32,13 @@ def swipe_in_product (value)
     Appium::TouchAction.new.swipe(start_x: 0.5, start_y: 0.4, end_x: 0.5, end_y: 1, duration: 600).perform
     previous_element = current_element
     current_element = get_source
+  end
 
     if exists { text(value) }
       text(value).click
     else
       fail("'#{value}' didn't exist!")
     end
-  end
 end
 
 def click_zero ()
@@ -79,4 +79,8 @@ end
 
 def click_nine ()
   Appium::TouchAction.new.tap(x: 674, y: 1576).wait(500).perform
+end
+
+def click_triple_zero()
+  Appium::TouchAction.new.tap(x: 674, y: 1735).wait(500).perform
 end

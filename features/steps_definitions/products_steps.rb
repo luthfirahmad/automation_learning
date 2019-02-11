@@ -47,7 +47,7 @@ Then("I click Kembali Ke Menu Utama button") do
 end
 
 Then(/^I swipe to find "([^"]*)" menu$/) do |value|
-  swipe_in_product(value)
+  swipe_method(value)
 end
 
 Then(/^I verify that was "([^"]*)" page$/) do |value|
@@ -124,4 +124,16 @@ end
 
 Then("I choose {string} plan") do |value|
   text(value).click
+end
+
+Then(/^I press lanjut in uang elektronik page$/) do
+  Appium::TouchAction.new.tap(x: 946.7, y: 1647, count: 1).perform
+end
+
+
+Then(/^I input dua puluh lima ribu rupiah for recharge$/) do
+  click_two
+  click_five
+  click_triple_zero
+  Appium::TouchAction.new.tap(x:954, y: 1647).perform
 end
