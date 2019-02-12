@@ -72,3 +72,15 @@ Then(/^I swipe to find Lanjut button$/) do
   Appium::TouchAction.new.swipe(start_x: 0.5, start_y: 0.4, end_x: 0.5, end_y: 1, duration: 600).perform
   find_element(id: "tv_next").click
 end
+
+Then("I input my name {string}") do |value|
+  find_element(id: "et_input").send_keys(value)
+end
+
+Then("I input my card number {string}") do |value|
+  find_element(id: "et_input").send_keys(value)
+end
+
+Then("I click Kategori Bantuan button") do
+  find_element(id: "bt_category").click
+end
