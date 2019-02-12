@@ -109,3 +109,78 @@ Feature: This feature including send ticket to customer service and give rating 
     Then I verify my ticket already been sent
     Then I click Kembali Ke Menu Utama button
     Then I verify ticket go to "Kotak Masuk" page
+
+  @ticket_recharge_last
+  Scenario: Submit ticket from last transaction for recharge product
+    Then I click "AKUN" menu
+    Then I click Hubungi Kami icon
+    Then I click Transaksi Terakhir button
+    Then I verify that was "Pilih Transaksi Bermasalah" page
+    Then I click Filter Status button
+    Then I choose Kedaluwarsa status
+    Then I swipe to find order id "#22606573"
+    Then I choose problem "Bagaimana jika saya salah memasukkan nomor?"
+    Then I press "HUBUNGI KAMI" button with swipe first
+    Then I filling complaint "Transaksi belum masuk"
+    Then I go to next step
+    Then I click Pilih Gambar button
+    Then I click "Ambil Foto" menu
+    Then I click shutter camera button
+    Then I click confirm camera button
+    Then I verify image
+    Then I go to next step
+    Then I verify ticket in Konfirmasi page
+    Then I swipe to find Lanjut button
+    Then I verify my ticket already been sent
+    Then I click Kembali Ke Menu Utama button
+    Then I verify ticket go to "Kotak Masuk" page
+
+  @ticket_recharge_category
+  Scenario: Submit ticket from choose category for recharge product
+    Then I click "AKUN" menu
+    Then I click Hubungi Kami icon
+    Then I click Kategori Bantuan button
+    Then I verify that was "Kategori Bantuan" page
+    Then I press "Data" button with swipe first
+    Then I choose problem "Bagaimana jika saya salah memasukkan nomor?"
+    Then I press "HUBUNGI KAMI" button with swipe first
+    Then I click Filter Status button
+    Then I choose Kedaluwarsa status
+    Then I swipe to find order id "#22606573"
+    Then I filling complaint "Transaksi belum masuk"
+    Then I go to next step
+    Then I click Pilih Gambar button
+    Then I click "Ambil Foto" menu
+    Then I click shutter camera button
+    Then I click confirm camera button
+    Then I verify image
+    Then I go to next step
+    Then I verify ticket in Konfirmasi page
+    Then I swipe to find Lanjut button
+    Then I verify my ticket already been sent
+    Then I click Kembali Ke Menu Utama button
+    Then I verify ticket go to "Kotak Masuk" page
+
+  @ticket_general_category
+  Scenario: Submit ticket except recharge and top up
+    Then I click "AKUN" menu
+    Then I click Hubungi Kami icon
+    Then I click Kategori Bantuan button
+    Then I verify that was "Kategori Bantuan" page
+    Then I choose plan "Akun"
+    Then I choose problem "Mengapa Saya Tidak Dapat Melakukan Perubahan Password?"
+    Then I press "HUBUNGI KAMI" button with swipe first
+    Then I filling complaint "Transaksi belum masuk"
+    Then I go to next step
+    Then I click Pilih Gambar button
+    Then I click "Ambil Foto" menu
+    Then I click shutter camera button
+    Then I click confirm camera button
+    Then I verify image
+    Then I go to next step
+    Then I verify ticket in Konfirmasi page
+    Then I swipe to find Lanjut button
+    Then I verify my ticket already been sent
+    Then I click Kembali Ke Menu Utama button
+    Then I verify ticket go to "Kotak Masuk" page
+

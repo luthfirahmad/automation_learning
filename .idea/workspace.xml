@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec832fa5-806a-44be-a79c-721e252f6f00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/selfhelp.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/selfhelp.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps_definitions/selfhelp_steps.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps_definitions/selfhelp_steps.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/support/env.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="275">
+              <caret line="85" column="3" lean-forward="true" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -58,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/selfhelp.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="81" column="49" lean-forward="true" selection-start-line="81" selection-start-column="49" selection-end-line="81" selection-end-column="49" />
+            <state relative-caret-position="480">
+              <caret line="186" column="2" lean-forward="true" selection-start-line="186" selection-start-column="2" selection-end-line="186" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -67,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/steps_definitions/selfhelp_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="121">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
         </entry>
@@ -97,6 +95,7 @@
       <find>tv_call</find>
       <find>swipe_in</find>
       <find>et_input</find>
+      <find>I filling</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -210,12 +209,12 @@
       <workItem from="1549536930715" duration="3475000" />
       <workItem from="1549784986077" duration="11322000" />
       <workItem from="1549870254506" duration="15162000" />
-      <workItem from="1549941898825" duration="6657000" />
+      <workItem from="1549941898825" duration="11826000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68778000" />
+    <option name="totallyTimeSpent" value="73947000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
@@ -235,7 +234,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3534884" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3534884" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -309,24 +308,24 @@
     <entry file="file://$PROJECT_DIR$/features/steps_definitions/products_steps.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/support/env.rb">
+    <entry file="file://$PROJECT_DIR$/features/steps_definitions/selfhelp_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="121">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/steps_definitions/selfhelp_steps.rb">
+    <entry file="file://$PROJECT_DIR$/features/support/env.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="275">
+          <caret line="85" column="3" lean-forward="true" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/selfhelp.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="81" column="49" lean-forward="true" selection-start-line="81" selection-start-column="49" selection-end-line="81" selection-end-column="49" />
+        <state relative-caret-position="480">
+          <caret line="186" column="2" lean-forward="true" selection-start-line="186" selection-start-column="2" selection-end-line="186" selection-end-column="2" />
         </state>
       </provider>
     </entry>
