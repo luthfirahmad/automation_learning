@@ -84,3 +84,41 @@ end
 Then("I click Kategori Bantuan button") do
   find_element(id: "bt_category").click
 end
+
+
+Then(/^I click Kirim Sekarang$/) do
+  text("KIRIM SEKARANG").click
+end
+
+Then("I click Kotak Masuk icon") do
+  find_element(id: "action_costumer_service").click
+end
+
+Then("I choose {string} tab") do |value|
+  text(value).click
+end
+
+Then("I choose ticket with id {string}") do |value|
+  text(value).click
+end
+
+Then("I check status ticket was {string}") do |value|
+  text(value)
+end
+
+Then("I fill comment {string}") do |value|
+  find_element(id: "et_reply").send_keys(value)
+end
+
+Then("I click Submit button") do
+  find_element(id: "iv_send").click
+end
+
+
+Then(/^I verify my comment$/) do
+ find_element(id: "wv_content")
+end
+
+Then(/^I check page have rating section Puas and "([^"]*)"$/) do |value|
+  swipe_method_selfhelp(value)
+end

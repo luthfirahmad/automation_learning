@@ -146,7 +146,7 @@ Feature: This feature including send ticket to customer service and give rating 
     Then I press "HUBUNGI KAMI" button with swipe first
     Then I click Filter Status button
     Then I choose Kedaluwarsa status
-    Then I swipe to find order id "#22606573"
+    Then I swipe to find order id "#22606232"
     Then I filling complaint "Transaksi belum masuk"
     Then I go to next step
     Then I click Pilih Gambar button
@@ -168,7 +168,7 @@ Feature: This feature including send ticket to customer service and give rating 
     Then I click Kategori Bantuan button
     Then I verify that was "Kategori Bantuan" page
     Then I choose plan "Akun"
-    Then I choose problem "Mengapa Saya Tidak Dapat Melakukan Perubahan Password?"
+    Then I choose problem "Mengapa Tidak Dapat Melakukan Perubahan Password?"
     Then I press "HUBUNGI KAMI" button with swipe first
     Then I filling complaint "Transaksi belum masuk"
     Then I go to next step
@@ -179,8 +179,39 @@ Feature: This feature including send ticket to customer service and give rating 
     Then I verify image
     Then I go to next step
     Then I verify ticket in Konfirmasi page
-    Then I swipe to find Lanjut button
+    Then I click Kirim Sekarang
     Then I verify my ticket already been sent
     Then I click Kembali Ke Menu Utama button
     Then I verify ticket go to "Kotak Masuk" page
+
+  @submit_reply_ongoing_ticket
+  Scenario: Submit comment on ongoing ticket
+    Then I click Kotak Masuk icon
+    Then I choose "Tiket" tab
+    Then I swipe to find "Tiket #436" menu
+    Then I verify that was "Tiket #436" page
+    Then I check status ticket was "Diproses"
+    Then I fill comment "Kenapa belum dibalas"
+    Then I click Submit button
+    Then I verify my comment
+
+  @reply_ticket_from_cs
+  Scenario: Replying ticket from CS
+    Then I click Kotak Masuk icon
+    Then I choose "Tiket" tab
+    Then I swipe to find "Tiket #430" menu
+    Then I verify that was "Tiket #430" page
+    Then I check status ticket was "Menunggu Balasan"
+    Then I fill comment "Terima Kasih sudah dibalas"
+    Then I click Submit button
+    Then I check status ticket was "Diproses"
+
+  @check_ticket_processed
+  Scenario: check ticket already have status "Selesai"
+    Then I click Kotak Masuk icon
+    Then I choose "Tiket" tab
+    Then I swipe to find "Tiket #435" menu
+    Then I verify that was "Tiket #435" page
+    Then I check status ticket was "Selesai"
+    Then I check page have rating section Puas and "Tidak Puas"
 

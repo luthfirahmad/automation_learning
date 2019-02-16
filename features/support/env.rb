@@ -41,6 +41,23 @@ def swipe_method (value)
     end
 end
 
+def swipe_method_selfhelp (value)
+  current_element = get_source
+  previous_element = ""
+
+  until (exists { text(value) }) || (current_element == previous_element) do
+    Appium::TouchAction.new.swipe(start_x: 0.5, start_y: 0.4, end_x: 0.5, end_y: 1, duration: 600).perform
+    previous_element = current_element
+    current_element = get_source
+  end
+
+  if exists { text(value) }
+    text(value)
+  else
+    fail("'#{value}' didn't exist!")
+  end
+end
+
 def click_zero ()
   Appium::TouchAction.new.tap(x: 406, y: 1710).perform
 end
