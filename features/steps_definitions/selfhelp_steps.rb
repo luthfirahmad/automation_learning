@@ -122,3 +122,21 @@ end
 Then(/^I check page have rating section Puas and "([^"]*)"$/) do |value|
   swipe_method_selfhelp(value)
 end
+
+Then("I check page have rating section YA and {string}") do |value|
+  swipe_method_selfhelp(value)
+end
+
+Then("I verify that my rating was sent") do
+  text("Terima kasih")
+  text("Kami sangat menghargai masukan Anda dan akan menggunakannya untuk memperbaiki kualitas pelayanan kami.")
+end
+
+Then("I click YA rating") do
+  find_element(id: "rl_upvote").click
+end
+
+Then("I click TIDAK rating") do
+  find_element(id: "rl_downvote").click
+end
+

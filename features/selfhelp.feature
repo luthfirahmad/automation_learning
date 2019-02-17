@@ -215,3 +215,50 @@ Feature: This feature including send ticket to customer service and give rating 
     Then I check status ticket was "Selesai"
     Then I check page have rating section Puas and "Tidak Puas"
 
+  @submit_rating_article_good
+  Scenario: submit good rating for article
+    Then I click "AKUN" menu
+    Then I click Hubungi Kami icon
+    Then I click Kategori Bantuan button
+    Then I swipe to find "Saldo Payfazz" menu
+    Then I choose "informasi" tab
+    Then I choose problem "Apa itu Saldo Payfazz"
+    Then I verify that was "Detail Pertanyaan" page
+    Then I check page have rating section YA and "TIDAK"
+    Then I click YA rating
+    Then I verify that my rating was sent
+
+  @submit_rating_article_bad
+  Scenario: submit bad rating for article
+    Then I click "AKUN" menu
+    Then I click Hubungi Kami icon
+    Then I click Kategori Bantuan button
+    Then I swipe to find "Data" menu
+    Then I choose "informasi" tab
+    Then I choose problem "Apakah ada notifikasi jika pembelian Paket Data telah berhasil?"
+    Then I verify that was "Detail Pertanyaan" page
+    Then I check page have rating section YA and "TIDAK"
+    Then I click TIDAK rating
+    Then I verify that my rating was sent
+
+  @submit_rating_ticket_good
+  Scenario: submit good rating for ticket
+    Then I click Kotak Masuk icon
+    Then I choose "Tiket" tab
+    Then I swipe to find "Tiket #284" menu
+    Then I verify that was "Tiket #284" page
+    Then I check status ticket was "Selesai"
+    Then I check page have rating section Puas and "Tidak Puas"
+    Then I click "Puas" menu
+    Then I verify that my rating was sent
+
+  @submit_rating_ticket_bad
+  Scenario: submit bad rating for ticket
+    Then I click Kotak Masuk icon
+    Then I choose "Tiket" tab
+    Then I swipe to find "Tiket #426" menu
+    Then I verify that was "Tiket #426" page
+    Then I check status ticket was "Selesai"
+    Then I check page have rating section Puas and "Tidak Puas"
+    Then I click "Tidak Puas" menu
+    Then I verify that my rating was sent
