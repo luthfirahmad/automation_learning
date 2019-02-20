@@ -257,6 +257,37 @@ Feature: This feature include using Payfazz products like ppob, bank transfer, a
     Then I verify my payment
     Then I click Kembali Ke Menu Utama button
     Then I land on Home page
+
+  @isi_saldo_via_bank
+  Scenario: recharge wallet using bank transfer
+    Then I click "ISI SALDO" menu
+    Then I choose plan "Rp 100.000"
+    # Then I allow Payfazz to access location
+    Then I choose "Bank Transfer" as payment method
+    Then I choose Bank in "1" st option
+    Then I click Bayar Sekarang
+    Then I verify Halaman Konfirmasi Pembayaran
+    Then I click Saya Sudah Bayar button
+    Then I check Konfirmasi Pembayaran pop up
+    Then I click Ya Sudah Bayar
+
+  @isi_saldo_via_va
+  Scenario: recharge wallet using virtual account
+    Then I click "ISI SALDO" menu
+    Then I choose plan "Rp 100.000"
+    Then I choose "Virtual Account" as payment method
+    Then I choose Bank in "2 st" option
+    Then I click Bayar Sekarang
+    Then I verify Konfirmasi pembayaran via virtual account
+
+  @isi_saldo_via_telkom
+  Scenario: recharge wallet using Telkom
+    Then I click "ISI SALDO" menu
+    Then I choose plan "Rp 100.000"
+    Then I choose "Agen & Channel Pembayaran Telkom" as payment method
+    Then I click Bayar Sekarang
+    Then I verify Konfirmasi pembayaran via telkom
+
     
 
 

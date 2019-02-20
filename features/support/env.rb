@@ -58,6 +58,12 @@ def swipe_method_selfhelp (value)
   end
 end
 
+def choose_bank(index)
+  parent_bank = find_element(id: "recycler_view_expandable_option")
+  index_bank = parent_bank.find_elements(id: "fl_bank_wrapper")
+  index_bank["#{index}".to_i - 1].find_element(id: "image_view_bank").click
+end
+
 def click_zero ()
   Appium::TouchAction.new.tap(x: 406, y: 1710).perform
 end

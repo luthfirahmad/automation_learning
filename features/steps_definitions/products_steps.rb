@@ -137,3 +137,54 @@ Then(/^I input dua puluh lima ribu rupiah for recharge$/) do
   click_triple_zero
   Appium::TouchAction.new.tap(x:954, y: 1647).perform
 end
+
+Then("I allow Payfazz to access location") do
+  allow_notif = find_element(id: "permission_allow_button")
+
+  if (exists { allow_notif })
+    allow_notif.click
+  else
+    text("Bank Transfer").click
+  end
+end
+
+Then("I verify Halaman Konfirmasi Pembayaran") do
+  find_element(id: "tv_bank_account_no")
+  text("Transfer tepat 3 digit terakhir agar transaksi berhasil.")
+  find_element(id: "timer_view")
+
+end
+
+Then("I click Saya Sudah Bayar button") do
+  text("Saya Sudah Bayar").click
+end
+
+Then("I check Konfirmasi Pembayaran pop up") do
+  text("Konfirmasi Pembayaran")
+  text("YA SUDAH BAYAR")
+end
+
+Then("I click Ya Sudah Bayar") do
+  find_element(xpath: "//android.widget.TextView[@text='YA SUDAH BAYAR']").click
+end
+
+Then("I choose {string} as payment method") do |value|
+  text(value).click
+end
+
+
+Then("I verify Konfirmasi pembayaran via virtual account") do
+  text("Konfirmasi Pembayaran")
+  text("Total pembayaran di atas akan muncul secara otomatis saat Anda memasukan nomor VA yang benar")
+  find_element(id: "view_layout_countdown")
+end
+
+Then(/^I choose Bank in "([^"]*)" option$/) do |index|
+  choose_bank(index)
+end
+
+Then(/^I verify Konfirmasi pembayaran via telkom$/) do
+  find_element(id: "text_total_payment_finpay_two").text
+  find_element(id: "view_layout_countdown")
+  text("Konfirmasi Pembayaran")
+end
